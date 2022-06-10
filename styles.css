@@ -64,8 +64,14 @@ body {
 }
 
 .book-array-div {
+  display: grid;
   outline: 1px solid green;
   grid-column: 2/9;
   grid-row: 2/11;
   margin-left: 20px;
+  row-gap: 20px;
+  column-gap: 20px;
+  padding: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
 }
