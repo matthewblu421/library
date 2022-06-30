@@ -29,7 +29,35 @@ function addBookToLibrary() {
   myLibrary.push(newBook);
 }
 
-
-console.log(myLibrary[0].info());
+// console.log(myLibrary[0].info());
 
 function displayBooks(myLibrary) {}
+
+function clearInput() {
+  document.getElementById("title").value = "";
+  document.getElementById("author").value = "";
+  document.getElementById("pages").value = "";
+  document.getElementById("read").value = "";
+}
+
+function addBookFromButton() {
+  const newBook = new Book(
+    document.getElementById("title").value,
+    document.getElementById("author").value,
+    document.getElementById("pages").value,
+    document.getElementById("read").value
+  );
+  myLibrary.push(newBook);
+  clearInput();
+  console.dir(myLibrary);
+}
+
+function addOneBook() {
+  let newDiv = document.createElement("div");
+  newDiv.id = "x";
+  document.body.append(newDiv);
+  document.querySelector(".bookarraydiv").appendChild(newDiv);
+
+  let content = `<div class="addonebook"><span class="cardtitle">The Old Man and the Sea who went to the dairy barn</span><br><span class="cardauthor">Author</span><br><span class="cardpages">Pages</span><br><button class="readbtn">Read</button></div>`;
+  newDiv.innerHTML += content;
+}

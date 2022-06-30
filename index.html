@@ -1,48 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Library</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scripts.js" defer></script>
+  </head>
+  <body>
     <div class="container">
-        <div class="header">
-            <span class="headertext">Your Library</span>
-        </div>
-        <div class="add-book">
-        <button class="add-book-btn" onclick="openForm()">Submit</button>
-        </div>
-        <div class="add-book-popup">
-            <div class="formPopup" id="popupForm">
-                <form action="/action_page.php" class="formContainer">
-                    <h2>Add New Book</h2>
-                    <label for="title">
-                        Title
-                    </label>
-                    <input type="text" id="title" placeholder="Title" name="title" required>
-                    <br>
+      <div class="header">
+        <span class="headertext">Your Library</span>
+      </div>
+      <div class="add-book">
+        <button onClick="addBookFromButton()" class="add-book-btn">Submit</button>
+      </div>
+      <div class="add-book-popup">
+        <div class="formPopup" id="popupForm">
+          <form action="/action_page.php" class="formContainer">
+            <h2>Add New Book</h2>
+            <label for="title"> Title </label>
+            <input
+              type="text"
+              id="title"
+              placeholder="Title"
+              name="title"
+              required
+            />
+            <br />
 
-                    <label for="author">
-                        Author
-                    </label>
-                    <input type="text" id="author" placeholder="Author" name="author" required><br>
-                    <label for="pages">
-                        Number of Pages
-                    </label>
-                    <input type="text" id="pages" placeholder="Pages" name="pages" required><br>
-                    <label for="read">
-                        Read / Not Read?
-                    </label>
-                    <input type="text" id="read" placeholder="Yes/No" name="read" required>
-
-                </form>
-            </div>
+            <label for="author"> Author </label>
+            <input
+              type="text"
+              id="author"
+              placeholder="Author"
+              name="author"
+              required
+            /><br />
+            <label for="pages"> Number of Pages </label>
+            <input
+              type="text"
+              id="pages"
+              placeholder="Pages"
+              name="pages"
+              required
+            /><br />
+            <label for="read">Have you read this </label>
+            <input
+              type="text"
+              id="read"
+              placeholder="Yes/No"
+              name="read"
+              required
+            />
+          </form>
         </div>
-        <div class="book-array-div"></div>
+      </div>
+      <div class="bookarraydiv">
+        <div class="addonebook">
+          <span class="cardtitle"
+            >The Old Man and the Sea</span
+          ><br /><span class="cardauthor">Ernest Hemingway</span><br /><span
+            class="cardpages"
+            >127 pages</span
+          ><br /><button class="readbtn">Read</button>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
